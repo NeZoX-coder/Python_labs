@@ -1,7 +1,7 @@
 import string
 
 abc1 = 'abcdefghijklmnopqrstuvwxyz'
-abc2 = 'zyxwvutsrqponmlkjihgfedcba'
+abc2 = 'qrstuvwxyzabcdefghijklmnop'
 smeschenie = 3
 
 
@@ -10,13 +10,13 @@ def crypt(text):
     rez = ""
     for c in text:
         if c != ' ':
-            i = abc1.index(c)
-            i = (i + shift) % len(abc1)
-            rez = rez + abc2[i]
-            shift = abc2.index(rez[-1])
+            # i = abc1.index(c)
+            i = (abc1.index(c) + shift) % len(abc1)
+            rez += abc1[i]
+            shift = abc1.index(rez[-1])
             # shift = abs(abc2.index(rez[-1]) - 26)
         else:
-            rez = rez + " "
+            rez += " "
     return rez
 
 
@@ -25,14 +25,14 @@ def decrypt(text):
     rez = ""
     for c in text:
         if c != ' ':
-            i = abc2.index(c)
-            i = (i + shift) % len(abc2)
-            rez = rez + abc1[i]
-            shift = abc1.index(rez[0])
+            # i = abc1.index(c)
+            i = (abc1.index(c) - shift) % len(abc1)
+            rez += abc1[i]
+            shift += abc1.index(rez[-1])
 
         else:
-            rez = rez + " "
-    return rez;
+            rez += " "
+    return rez
 
 
 in_str = "hello world"
