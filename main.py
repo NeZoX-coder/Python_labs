@@ -1,7 +1,6 @@
 https://github.com/Financial-Times/polyfill-service/commit/66cb8764651fd3d966e3d1acaf1c2f8066635a49#diff-63f7448adaa3ac67058ef9ca01d03b42400861e718a9b9ccbef7cdfdd797d5fe
 https://dencode.com/ru/cipher
 
-
 from operator import itemgetter
 import re
 
