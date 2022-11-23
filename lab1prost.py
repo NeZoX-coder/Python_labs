@@ -8,8 +8,7 @@ def crypt(text):
     rez = ""
     for c in text:
         if c != " ":
-            i = abc.find(c)
-            i = (i + smeschenie) % len(abc)
+            i = (abc.find(c) + smeschenie) % len(abc)
             rez += abc[i]
         else:
             rez += " "
@@ -20,8 +19,7 @@ def decrypt(text):
     rez = ""
     for c in text:
         if c != " ":
-            i = abc.find(c)
-            i = (i - smeschenie) % len(abc)
+            i = (abc.find(c) - smeschenie) % len(abc)
             rez += abc[i]
         else:
             rez += " "

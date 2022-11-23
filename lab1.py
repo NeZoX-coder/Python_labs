@@ -1,7 +1,7 @@
 import string
 
 abc1 = 'abcdefghijklmnopqrstuvwxyz'
-abc2 = 'qrstuvwxyzabcdefghijklmnop' # буква а №10
+abc2 = 'qrstuvwxyzabcdefghijklmnop'
 smeschenie = 3
 
 
