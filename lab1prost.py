@@ -1,7 +1,7 @@
 import string
 
 
-abc = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+abc = 'abcdefghijklmnopqrstuvwxyz'
 smeschenie = 3
 
 
