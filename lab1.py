@@ -8,9 +8,9 @@ smeschenie = 3
 def crypt(text):
     shift = abs(smeschenie)
     rez = ""
-    for c in text:
-        if c != ' ':
-            i = (abc1.index(c) + shift) % len(abc1)
+    for i in text:
+        if i != ' ':
+            i = (abc1.index(i) + shift) % len(abc1)
             rez += abc2[i]
             shift = abc2.index(rez[-1])
         else:
@@ -21,9 +21,9 @@ def crypt(text):
 def decrypt(text):
     shift = abs(smeschenie)
     rez = ""
-    for c in text:
-        if c != ' ':
-            i = (abc2.index(c) - shift) % len(abc1)
+    for i in text:
+        if i != ' ':
+            i = (abc2.index(i) - shift) % len(abc1)
             rez += abc1[i]
             shift += abc1.index(rez[-1])
 

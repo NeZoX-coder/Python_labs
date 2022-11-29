@@ -4,26 +4,25 @@ import string
 abc = 'abcdefghijklmnopqrstuvwxyz'
 smeschenie = 3
 
-
 def crypt(text):
     rez = ""
-    for c in text:
-        if c in abc:
-            i = (abc.find(c) + smeschenie) % len(abc)
+    for i in text:
+        if i in abc:
+            i = (abc.find(i) + smeschenie) % len(abc)
             rez += abc[i]
         else:
-            rez += c
+            rez += i
     return rez
 
 
 def decrypt(text):
     rez = ""
-    for c in text:
-        if c in abc:
-            i = (abc.find(c) - smeschenie) % len(abc)
+    for i in text:
+        if i in abc:
+            i = (abc.find(i) - smeschenie) % len(abc)
             rez += abc[i]
         else:
-            rez += c
+            rez += i
     return rez
 
 
