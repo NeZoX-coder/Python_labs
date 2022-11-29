@@ -31,10 +31,13 @@ def decode_abc(abc, sentences):
 def decode_sentences(text, abc_old_new):
     rez = ""
     for i in text:
-        rez += abc_old_new[i]
+        if i in abc_old_new.keys():
+            rez += abc_old_new[i]
+        else:
+            rez += i
     return rez
 
 a = decode_abc(arr_abc[1], arr_sentences[1])
 print(a)
-print(decode_sentences(a, arr_sentences[1]))
+print(decode_sentences(arr_sentences[1], a))
 
