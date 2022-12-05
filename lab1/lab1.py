@@ -1,4 +1,3 @@
-import string
 
 abc1 = 'abcdefghijklmnopqrstuvwxyz'
 abc2 = 'qrstuvwxyzabcdefghijklmnop'
@@ -6,7 +5,7 @@ smeschenie = 3
 
 
 def crypt(text):
-    shift = abs(smeschenie)
+    shift = smeschenie
     rez = ""
     for i in text:
         if i != ' ':
@@ -19,7 +18,7 @@ def crypt(text):
 
 
 def decrypt(text):
-    shift = abs(smeschenie)
+    shift = smeschenie
     rez = ""
     for i in text:
         if i != ' ':

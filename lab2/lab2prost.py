@@ -14,7 +14,6 @@ arr_numb1_sentences = [
 ]
 
 
-
 def decrypt(text, smeschenie):
     rez = ""
     for c in text:
@@ -27,14 +26,9 @@ def decrypt(text, smeschenie):
 
 
 for i in range(10):
-    print('#', i+1, '\n')
+    print('#', i + 1, '\n')
     print(arr_numb1_sentences[i])
-    print(decrypt(arr_numb1_sentences[i], arr_smesch[i]),'\n\n')
-
-
-
-
-
+    print(decrypt(arr_numb1_sentences[i], arr_smesch[i]), '\n\n')
 
 # def crypt(text, smeschenie):
 #     rez = ""

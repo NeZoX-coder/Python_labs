@@ -1,8 +1,7 @@
-import string
-
 
 abc = 'abcdefghijklmnopqrstuvwxyz'
 smeschenie = 3
+
 
 def crypt(text):
     rez = ""
@@ -27,7 +26,7 @@ def decrypt(text):
 
 
 in_str = "hello world"
-out_str=crypt(in_str)
+out_str = crypt(in_str)
 print(in_str)
 print(out_str)
 print(decrypt(out_str))
