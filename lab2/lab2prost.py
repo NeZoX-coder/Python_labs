@@ -30,12 +30,3 @@ for i in range(10):
     print(arr_numb1_sentences[i])
     print(decrypt(arr_numb1_sentences[i], arr_smesch[i]), '\n\n')
 
-# def crypt(text, smeschenie):
-#     rez = ""
-#     for c in text:
-#         if c in abc:
-#             i = (abc.find(c) + smeschenie) % len(abc)
-#             rez += abc[i]
-#         else:
-#             rez += c
-#     return rez
