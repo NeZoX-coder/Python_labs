@@ -68,14 +68,15 @@ for i in range(len(message_bytes) // block_size):
         digest[2 * block_size + j] = digest[block_size + j] ^ digest[j]
 
     # Rounds of encryption over the entire array. Current byte XOR'd with the previous (substituted) byte.
-    previous_hashbyte = 0
-    for j in range(n_rounds):
-        for k in range(buffer_size):
-            digest[k] = previous_hashbyte = digest[k] ^ Sbox[previous_hashbyte]
-
-        previous_hashbyte = (previous_hashbyte + j) % len(Sbox)
+    # previous_hashbyte = 0
+    # for j in range(n_rounds):
+    #     for k in range(buffer_size):
+    #         digest[k] = previous_hashbyte = digest[k] ^ Sbox[previous_hashbyte]
+    #
+    #     previous_hashbyte = (previous_hashbyte + j) % len(Sbox)
 
 # Step 5: Output
 # ==============
-print(binascii.hexlify(digest[:16]).decode('utf-8'))
+# print(binascii.hexlify(digest[:16]).decode('utf-8'))
+print(digest)
 
